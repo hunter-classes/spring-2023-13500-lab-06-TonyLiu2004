@@ -4,7 +4,7 @@
 
 // add your tests here
 TEST_CASE("Caesar Cipher Encrypt"){
-    CHECK(encryptCaesar("Way to Go!",5) == "Rovvy, Gybvn!");
-    //CHECK(encryptCaesar("HELLO WORLD!",9) == "QNUUX FXAUM!" );
-    //CHECK(encryptCaesar("",10) == "" );
+    CHECK(encryptCaesar("Way to Go!",5) == "Bfd yt Lt!");
+    CHECK(encryptCaesar("HELLO WORLD!",9) == "QNUUX FXAUM!" );
+    CHECK(encryptCaesar("",10) == "" );
 }
