@@ -12,5 +12,5 @@ TEST_CASE("Caesar Cipher Encrypt"){
 
 TEST_CASE("Vigenere Cipher Encrypt"){
     CHECK(encryptVigenere("Hello, World!","CaKe") == "Jevpq, Wyvnd!");
-    CHECK(encryptCaesar("","") == "");
+    CHECK(encryptVigenere("","") == "");
 }
