@@ -31,7 +31,7 @@ string decryptCaesar(string input, int shift){
         if(!isalpha(x)){
             ret+=x;
         }else{
-            //shift reverse
+            ret+=reverseChar(x,shift);
         }
     }
     return ret;
