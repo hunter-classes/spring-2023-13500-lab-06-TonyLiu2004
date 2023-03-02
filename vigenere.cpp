@@ -21,7 +21,7 @@ char shiftChar(char c, int rshift){
 
 string encryptVigenere(string plaintext, string keyword){
     if(keyword == ""){
-        return plaintest;
+        return plaintext;
     }
     string ret = "";
     int z = 0;
