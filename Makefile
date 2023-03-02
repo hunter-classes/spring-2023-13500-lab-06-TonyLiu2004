@@ -1,4 +1,4 @@
-OBJECTS = caesar.o vigenere.o decrypt.o funcs.o
+OBJECTS = caesar.o vigenere.o decrypt.o
 main: main.o funcs.o $(OBJECTS)
 	g++ -o main main.o funcs.o $(OBJECTS)
 

@@ -3,6 +3,7 @@
 #include "caesar.h"
 #include "vigenere.h"
 #include "decrypt.h"
+#include "funcs.h"
 
 // add your tests here
 TEST_CASE("Caesar Cipher Encrypt"){
