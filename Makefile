@@ -1,8 +1,9 @@
-main: main.o funcs.o
-	g++ -o main main.o funcs.o
+OBJECTS = caesar.o
+main: main.o funcs.o $(OBJECTS)
+	g++ -o main main.o funcs.o $(OBJECTS)
 
-tests: tests.o funcs.o
-	g++ -o tests tests.o funcs.o
+tests: tests.o funcs.o $(OBJECTS)
+	g++ -o tests tests.o funcs.o $(OBJECTS)
 
 test-ascii: test-ascii.o
 	g++ -o test-ascii test-ascii.o
@@ -16,5 +17,7 @@ tests.o: tests.cpp doctest.h funcs.h
 
 test-ascii.o: test-ascii.cpp
 
+caesar.o: caesar.cpp caesar.h
+
 clean:
-	rm -f main.o funcs.o tests.o
+	rm -f main.o funcs.o tests.o $(OBJECTS)
