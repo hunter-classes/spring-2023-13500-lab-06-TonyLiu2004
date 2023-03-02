@@ -20,6 +20,12 @@ char reverseChar(char c, int rshift){
 }
 
 string decryptCaesar(string input, int shift){
+    if(shift==0){
+        return input;
+    }
+    if(input ==""){
+        return "";
+    }
     string ret = "";
     for(char x : input){
         if(!isalpha(x)){
@@ -31,6 +37,12 @@ string decryptCaesar(string input, int shift){
     return ret;
 }
 string decryptVigenere(string word, string key){
+    if(key == ""){
+        return word;
+    }
+    if(word == ""){
+        return "";
+    }
     string ret = "";
     int z = 0;
     for(char x : word){
