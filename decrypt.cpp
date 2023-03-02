@@ -1,6 +1,24 @@
 #include <iostream>
 #include "decrypt.h"
 using namespace std;
+
+char reverseChar(char c, int rshift){
+    char ret = c;
+    if(!isalpha(c)){
+        return c;
+    }
+    for(int i = 0;i < rshift;i++){
+        if(ret == 'a'){
+            ret = 'z';
+        }else if(ret == 'A'){
+            ret = 'Z';
+        }else{
+            ret--;
+        }
+    }
+    return ret;
+}
+
 string decryptCaesar(string input, int shift){
     string ret = "";
     for(char x : input){
