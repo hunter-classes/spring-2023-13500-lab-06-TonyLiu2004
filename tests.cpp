@@ -2,6 +2,7 @@
 #include "doctest.h"
 #include "caesar.h"
 #include "vigenere.h"
+#include "decrypt.h"
 
 // add your tests here
 TEST_CASE("Caesar Cipher Encrypt"){
@@ -12,5 +13,20 @@ TEST_CASE("Caesar Cipher Encrypt"){
 
 TEST_CASE("Vigenere Cipher Encrypt"){
     CHECK(encryptVigenere("Hello, World!","CaKe") == "Jevpq, Wyvnd!");
+    CHECK(encryptVigenere("I like cookies!","cookie") == "K zwum gqcysmw!");
     CHECK(encryptVigenere("","") == "");
+}
+
+TEST_CASE("Decrypt Caesar test"){
+    CHECK(decryptCaesar("Bfd yt Lt!",5) == "Way to Go!");
+    CHECK(decryptCaesar("QNUUX FXAUM!",9) == "HELLO WORLD!");
+    CHECK(decryptCaesar("QNUUX FXAUM!",0) == "QNUUX FXAUM!");
+    CHECK(decryptCaesar("",10) == "");
+}
+
+TEST_CASE("Decrypt Vigenere test"){
+    CHECK(decryptVigenere("Jevpq, Wyvnd!","CaKe") == "Hello, World!");
+    CHECK(decryptVigenere("K zwum gqcysmw!","cookie") == "I like cookies!");
+    CHECK(decryptVigenere("","banana") == "");
+    CHECK(decryptVigenere("nothing there","") == "nothing there");
 }

@@ -1,4 +1,4 @@
-OBJECTS = caesar.o vigenere.o
+OBJECTS = caesar.o vigenere.o decrypt.o
 main: main.o funcs.o $(OBJECTS)
 	g++ -o main main.o funcs.o $(OBJECTS)
 
@@ -20,6 +20,8 @@ test-ascii.o: test-ascii.cpp
 caesar.o: caesar.cpp caesar.h
 
 vigenere.o: vigenere.cpp vigenere.h
+
+decrypt.o: decrypt.cpp decrypt.h
 
 clean:
 	rm -f main.o funcs.o tests.o $(OBJECTS) test-ascii.o
