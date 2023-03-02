@@ -1,4 +1,5 @@
 #include <iostream>
+#include "decrypt.h"
 using namespace std;
 
 char shiftChar(char c, int rshift){
