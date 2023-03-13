@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include "decrypt.h"
 using namespace std;
 
@@ -58,4 +59,9 @@ string decryptVigenere(string word, string key){
         ret+=reverseChar(x,position);
     }
     return ret;
+}
+
+std::string solve(std::string encrypted_string){
+    
+
 }
